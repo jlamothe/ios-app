@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
     [self setTheText];
+    [self becomeFirstResponder];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -42,6 +43,11 @@
 {
     self.counter = 0;
     [self setTheText];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    [self.label setText:[NSString stringWithFormat:@"DON'T SHAKE ME, YOU CLOD!!"]];
 }
 
 @end
