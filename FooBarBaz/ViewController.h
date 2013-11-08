@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIButton *button;
+@property (nonatomic, weak) IBOutlet UIButton *clearButton;
 @property (nonatomic, weak) IBOutlet UILabel *label;
 @property (nonatomic) NSInteger counter;
 @end

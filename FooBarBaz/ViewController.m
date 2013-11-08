@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setTheText];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -25,10 +26,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setTheText
+{
+    [self.label setText:[NSString stringWithFormat:@"Button clicked: %d times", self.counter]];
+}
+
 - (IBAction)buttonClicked
 {
     self.counter++;
-    [self.label setText:[NSString stringWithFormat:@"Button clicked: %d times", self.counter]];
+    [self setTheText];
+}
+
+- (IBAction)clearTheThing
+{
+    self.counter = 0;
+    [self setTheText];
 }
 
 @end
