@@ -25,5 +25,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)buttonClicked
+{
+    self.counter++;
+    [self.label setText:[NSString stringWithFormat:@"Button clicked: %d times", self.counter]];
+}
 
 @end
